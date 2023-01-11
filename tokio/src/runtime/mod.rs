@@ -228,11 +228,17 @@ cfg_rt! {
         pub use crate::util::rand::RngSeed;
     }
 
+    mod defer;
+    pub(crate) use defer::Defer;
+
     mod handle;
     pub use handle::{EnterGuard, Handle, TryCurrentError};
 
     mod runtime;
     pub use runtime::{Runtime, RuntimeFlavor};
+
+    mod thread_id;
+    pub(crate) use thread_id::ThreadId;
 
     cfg_metrics! {
         mod metrics;
