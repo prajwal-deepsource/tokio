@@ -1,8 +1,12 @@
 version = 1
 
+exclude_patterns = [
+  "benches/**",
+  "examples/**"
+]
+
 [[analyzers]]
 name = "rust"
-enabled = true
 
   [analyzers.meta]
   msrv = "stable"
